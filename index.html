@@ -168,6 +168,9 @@ Now, Trumpkin has left the pumpkin patch and made its way into the crypto univer
     <div class="mbr-section-btn item-footer">
         <a href="#" onclick="copiarAlPortapapeles()" class="btn item-btn btn-primary display-7">CA</a>
     </div>
+    
+    <!-- Mensaje de confirmación -->
+    <p id="confirmacion" style="color: rgb(255, 255, 255); display: none;">text copied to clipboard!</p>
 
     <script>
         function copiarAlPortapapeles() {
@@ -177,7 +180,13 @@ Now, Trumpkin has left the pumpkin patch and made its way into the crypto univer
             // Copiar el texto al portapapeles usando la API moderna
             navigator.clipboard.writeText(mensaje)
                 .then(() => {
-                    alert("Texto copiado: " + mensaje);
+                    // Mostrar el mensaje de confirmación sin alert
+                    document.getElementById("confirmacion").style.display = "block";
+                    
+                    // Ocultar el mensaje de confirmación después de unos segundos
+                    setTimeout(() => {
+                        document.getElementById("confirmacion").style.display = "none";
+                    }, 2000); // Tiempo en milisegundos (2 segundos)
                 })
                 .catch(err => {
                     console.error("Error al copiar: ", err);
