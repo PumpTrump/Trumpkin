@@ -150,7 +150,29 @@ Now, Trumpkin has left the pumpkin patch and made its way into the crypto univer
 				<div class="mbr-section-head mb-5">
 					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>How to buy</strong></h4>
 					<!-- <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Hover over pictures to add more cards or rearrange them with the Tools panel. Add multiple cards by selecting multiple images. You can set the number of columns in Block Parameters.</h5> -->				
-					<div class="mbr-section-btn item-footer"><a href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" class="btn item-btn btn-primary display-7">CA</a></div>
+    <!-- Campo de entrada oculto con el texto a copiar -->
+    <input type="text" id="mensaje" value="0x40a914ca288b0591d8501577dfc74a3a52595a2d369889594818aa2e43663ed9::tkin::TKIN" readonly style="display: none;">
+
+    <!-- Botón que llama a la función de copiar -->
+    <div class="mbr-section-btn item-footer">
+        <a href="#" onclick="copiarAlPortapapeles()" class="btn item-btn btn-primary display-7">Copy Address</a>
+    </div>
+
+    <script>
+        function copiarAlPortapapeles() {
+            // Obtener el texto del campo oculto
+            var mensaje = document.getElementById("mensaje").value;
+            
+            // Copiar el texto al portapapeles usando la API moderna
+            navigator.clipboard.writeText(mensaje)
+                .then(() => {
+                    alert("Texto copiado: " + mensaje);
+                })
+                .catch(err => {
+                    console.error("Error al copiar: ", err);
+                });
+        }
+    </script>
 				</div>
 			</div>
 		</div>
