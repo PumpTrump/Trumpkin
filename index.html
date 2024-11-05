@@ -88,9 +88,9 @@
     <!-- Primer botón y campo oculto -->
     <input type="text" id="mensaje1" value="https://play.google.com/store/apps/details?id=com.ebpearls.choiceapp&hl=es_419" readonly style="display: none;">
     <div class="mbr-section-btn item-footer">
-        <a href="#" onclick="copiarAlPortapapeles(event, 'mensaje1', 'confirmacion1')" class="btn item-btn btn-primary display-7">Copy Address 1</a>
+        <a href="#" onclick="copiarAlPortapapeles(event, 'mensaje1', 'confirmacion1')" class="btn item-btn btn-primary display-7">Copy Address</a>
     </div>
-    <p id="confirmacion1" class="mensaje-confirmacion">text copied to clipboard!</p>
+    <p id="confirmacion1" style="color: white; display: none;">text copied to clipboard</p>
 
     <script>
         function copiarAlPortapapeles(event, mensajeId, confirmacionId) {
@@ -166,7 +166,7 @@ Now, Trumpkin has left the pumpkin patch and made its way into the crypto univer
     <div class="mbr-section-btn item-footer">
         <a href="#" onclick="copiarAlPortapapeles(event, 'mensaje2', 'confirmacion2')" class="btn item-btn btn-primary display-7">CA</a>
     </div>
-    <p id="confirmacion2" class="mensaje-confirmacion">text copied to clipboard!</p>
+    <p id="confirmacion2" style="color: white; display: none;">text copied to clipboard!</p>
 
     <script>
         function copiarAlPortapapeles(event, mensajeId, confirmacionId) {
