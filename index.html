@@ -93,7 +93,7 @@
     <p id="confirmacion1" style="color: white; display: none;">text copied to clipboard!</p>
 
     <script>
-        function copiarAlPortapapeles(event, mensajeId) {
+        function copiarAlPortapapeles(event, mensajeId, confirmacionId) {
             // Evitar el comportamiento predeterminado del enlace
             event.preventDefault();
 
@@ -103,12 +103,13 @@
             // Copiar el texto al portapapeles usando la API moderna
             navigator.clipboard.writeText(mensaje)
                 .then(() => {
-                    // Mostrar el mensaje de confirmación sin alert
-                    document.getElementById("confirmacion").style.display = "block";
+                    // Mostrar el mensaje de confirmación correspondiente
+                    var confirmacion = document.getElementById(confirmacionId);
+                    confirmacion.style.display = "block";
                     
                     // Ocultar el mensaje de confirmación después de unos segundos
                     setTimeout(() => {
-                        document.getElementById("confirmacion").style.display = "none";
+                        confirmacion.style.display = "none";
                     }, 2000); // Tiempo en milisegundos (2 segundos)
                 })
                 .catch(err => {
@@ -167,9 +168,8 @@ Now, Trumpkin has left the pumpkin patch and made its way into the crypto univer
     </div>
     <p id="confirmacion2" style="color: white; display: none;">text copied to clipboard!</p>
 
-
     <script>
-        function copiarAlPortapapeles(event, mensajeId) {
+        function copiarAlPortapapeles(event, mensajeId, confirmacionId) {
             // Evitar el comportamiento predeterminado del enlace
             event.preventDefault();
 
@@ -179,12 +179,13 @@ Now, Trumpkin has left the pumpkin patch and made its way into the crypto univer
             // Copiar el texto al portapapeles usando la API moderna
             navigator.clipboard.writeText(mensaje)
                 .then(() => {
-                    // Mostrar el mensaje de confirmación sin alert
-                    document.getElementById("confirmacion").style.display = "block";
+                    // Mostrar el mensaje de confirmación correspondiente
+                    var confirmacion = document.getElementById(confirmacionId);
+                    confirmacion.style.display = "block";
                     
                     // Ocultar el mensaje de confirmación después de unos segundos
                     setTimeout(() => {
-                        document.getElementById("confirmacion").style.display = "none";
+                        confirmacion.style.display = "none";
                     }, 2000); // Tiempo en milisegundos (2 segundos)
                 })
                 .catch(err => {
