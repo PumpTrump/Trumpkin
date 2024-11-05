@@ -164,14 +164,12 @@ Now, Trumpkin has left the pumpkin patch and made its way into the crypto univer
 					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>How to buy</strong></h4>
 					<!-- <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Hover over pictures to add more cards or rearrange them with the Tools panel. Add multiple cards by selecting multiple images. You can set the number of columns in Block Parameters.</h5> -->				
     <!-- Segundo botón y campo oculto -->
-    <input type="text" id="mensaje2" value="https://example.com" readonly style="display: none;">
+    <input type="text" id="mensaje2" value="0x40a914ca288b0591d8501577dfc74a3a52595a2d369889594818aa2e43663ed9::tkin::TKIN" readonly style="display: none;">
     <div class="mbr-section-btn item-footer">
-        <a href="#" onclick="copiarAlPortapapeles(event, 'mensaje2')" class="btn item-btn btn-primary display-7">Copy Address 2</a>
+        <a href="#" onclick="copiarAlPortapapeles(event, 'mensaje2', 'confirmacion2')" class="btn item-btn btn-primary display-7">CA</a>
     </div>
+    <p id="confirmacion2" style="color: white; display: none;">¡Texto copiado al portapapeles!</p>
 
-
-    <!-- Mensaje de confirmación -->
-    <p id="confirmacion" style="color: white; display: none;">text copied to clipboard!</p>
 
     <script>
         function copiarAlPortapapeles(event, mensajeId) {
