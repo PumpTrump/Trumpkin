@@ -85,13 +85,16 @@
 				<p class="mbr-text mbr-fonts-style mb-4 display-7">Trumpkin is the latest memecoin that combines the bold, unforgettable spirit of Donald Trump with the iconic, fun personality of a Halloween pumpkin! Designed to bring laughs, entertainment, and a fresh take on seasonal cryptocurrency, Trumpkin is here to make the crypto scene a little brighter and a whole lot spookier. Perfectly timed for the Halloween season, Trumpkin is ready to rally supporters and bring everyone into the autumn spirit!&nbsp;<br></p>
 				
 			</div>
-			    <!-- Campo de entrada oculto con el texto a copiar -->
+    <!-- Campo de entrada oculto con el texto a copiar -->
     <input type="text" id="mensaje" value="0x40a914ca288b0591d8501577dfc74a3a52595a2d369889594818aa2e43663ed9::tkin::TKIN" readonly style="display: none;">
 
     <!-- Botón que llama a la función de copiar -->
     <div class="mbr-section-btn item-footer">
         <a href="#" onclick="copiarAlPortapapeles()" class="btn item-btn btn-primary display-7">Copy Address</a>
     </div>
+    
+    <!-- Mensaje de confirmación -->
+    <p id="confirmacion" style="color: rgb(255, 255, 255); display: none;">text copied to clipboard!</p>
 
     <script>
         function copiarAlPortapapeles() {
@@ -101,13 +104,21 @@
             // Copiar el texto al portapapeles usando la API moderna
             navigator.clipboard.writeText(mensaje)
                 .then(() => {
-                    alert("Texto copiado: " + mensaje);
+                    // Mostrar el mensaje de confirmación sin alert
+                    document.getElementById("confirmacion").style.display = "block";
+                    
+                    // Ocultar el mensaje de confirmación después de unos segundos
+                    setTimeout(() => {
+                        document.getElementById("confirmacion").style.display = "none";
+                    }, 2000); // Tiempo en milisegundos (2 segundos)
                 })
                 .catch(err => {
                     console.error("Error al copiar: ", err);
                 });
         }
-    </script>		</div>
+    </script>
+			
+    </div>
 		<div class="row mt-5 justify-content-center">
 			<!-- <div class="col-12 col-lg-12"> -->
 				<!-- <img src="assets/images/11.jpg" alt="Mobirise Website Builder" title=""> -->
